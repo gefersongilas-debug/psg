@@ -20,6 +20,7 @@
     if (p === '/' || p === '/index.html') return {path:'/', url};
     if (/^\/a-psg\/(?:index\.html)?$/.test(p)) return {path:'/a-psg/', url};
     if (/^\/solucoes\/(?:index\.html)?$/.test(p)) return {path:'/solucoes/', url};
+    if (/^\/clientes\/(?:index\.html)?$/.test(p)) return {path:'/clientes/', url};
     return null;
   }
 
@@ -77,7 +78,7 @@
       if (a.target && a.target !== '_self') return;
       const url = new URL(a.href);
       if (url.protocol !== 'file:' || url.pathname === location.pathname) return;
-      if (!/\/(?:index\.html|a-psg\/index\.html|solucoes\/index\.html)$/.test(url.pathname)) return;
+      if (!/\/(?:index\.html|a-psg\/index\.html|solucoes\/index\.html|clientes\/index\.html)$/.test(url.pathname)) return;
       event.preventDefault();
       root.classList.add('psg-leaving');
       setTimeout(() => location.assign(url.href), motionOK ? 135 : 0);
@@ -182,7 +183,7 @@
     cache.set(current.path,Promise.resolve({doc:new DOMParser().parseFromString(snapshot,'text/html'),base:location.href}));
     if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
     // Idle-fetch only the two tiny HTML documents, not full image galleries.
-    const warmPages = () => ['/','/a-psg/','/solucoes/'].filter(x=>x!==current.path).forEach(x => getPage(x).catch(()=>{}));
+    const warmPages = () => ['/','/a-psg/','/solucoes/','/clientes/'].filter(x=>x!==current.path).forEach(x => getPage(x).catch(()=>{}));
     if ('requestIdleCallback' in window) requestIdleCallback(warmPages,{timeout:1800});
     else setTimeout(warmPages,850);
   }

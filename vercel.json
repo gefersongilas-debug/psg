@@ -13,6 +13,11 @@
       "permanent": true
     },
     {
+      "source": "/clientes.html",
+      "destination": "/clientes/",
+      "permanent": true
+    },
+    {
       "source": "/a-psg/index.html",
       "destination": "/a-psg/",
       "permanent": true
@@ -20,6 +25,11 @@
     {
       "source": "/solucoes/index.html",
       "destination": "/solucoes/",
+      "permanent": true
+    },
+    {
+      "source": "/clientes/index.html",
+      "destination": "/clientes/",
       "permanent": true
     },
     {

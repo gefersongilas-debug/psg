@@ -79,3 +79,181 @@ html.psg-file-entry main{animation:psgFileEnter .32s ease-out both}
  .reveal,.reveal-left,.reveal-right{transition:none;transform:none;filter:none;opacity:1}
  .about-page .inner-hero-bg,.about-page .inner-hero-content{animation:none}
 }
+
+/* PSG v05 — extensão da identidade original, sem modificar as regras v04 */
+/* Três cartões biográficos com hierarquia e leitura confortável. */
+.about-page .team-grid article{min-height:460px;justify-content:flex-end;padding:34px 30px 32px}
+.about-page .team-grid h3{font-size:clamp(23px,2.25vw,33px);line-height:1.1;letter-spacing:-.035em;margin-bottom:18px}
+.about-page .team-grid .team-degree{order:0;margin:0 0 12px;color:var(--blue);font:600 10px "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.09em;line-height:1.5}
+.about-page .team-grid .team-bio{font-size:15px;line-height:1.62;color:#465962;max-width:440px;text-wrap:pretty}
+.about-page .team-grid article:hover .team-degree{color:#d6f0ff}
+.about-page .team-grid article:hover .team-bio{color:#edf7fa}
+
+/* Página Clientes: mesmo sistema de cor, fontes, containers e movimento da v04. */
+.clients-page .clients-hero{min-height:min(860px,94svh);align-items:flex-end}
+.clients-page .clients-hero-bg{object-position:center}
+.clients-page .clients-hero:after{background:linear-gradient(0deg,#061015f5 2%,#06101584 57%,#061015a6 100%),linear-gradient(90deg,#061015d9 0%,#06101560 80%)}
+.clients-page .clients-hero .inner-hero-content{padding-top:160px;padding-bottom:90px}
+.clients-page .clients-eyebrow{margin-bottom:26px}
+.clients-page .clients-hero h1{max-width:1050px;font-size:clamp(52px,7vw,105px);letter-spacing:-.065em;line-height:1.02;margin:0 0 32px}
+.clients-page .clients-hero h1 em{font-style:normal;color:var(--blue2)}
+.clients-page .clients-hero p{max-width:730px}
+.clients-hero-link{display:inline-flex;align-items:center;gap:28px;margin-top:42px;padding-bottom:12px;border-bottom:1px solid #ffffff69;font:600 11px "IBM Plex Mono",monospace;letter-spacing:.12em;text-transform:uppercase;transition:color .25s,border-color .25s}
+.clients-hero-link:hover{color:var(--blue2);border-color:var(--blue2)}
+.clients-hero-link span{font-size:20px}
+.clients-summary{background:#0c1d26;border-bottom:1px solid #ffffff22}
+.clients-summary-inner{display:grid;grid-template-columns:1fr 170px 170px;gap:45px;align-items:center;padding-top:42px;padding-bottom:42px}
+.clients-summary p{max-width:680px;color:#c3d2d8;font-size:clamp(18px,2vw,24px);line-height:1.35;margin:0}
+.clients-stat{display:flex;align-items:center;gap:13px}
+.clients-stat strong{font-size:clamp(46px,5vw,68px);font-weight:500;letter-spacing:-.075em;line-height:1;color:var(--blue2)}
+.clients-stat span{font:500 10px/1.5 "IBM Plex Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:#c4d3d9}
+.clients-list-section{padding-block:clamp(95px,10vw,156px)}
+.clients-section-head{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:75px;align-items:end;margin-bottom:65px}
+.clients-section-head h2{font-size:clamp(43px,5.2vw,75px);margin:0;line-height:.98;letter-spacing:-.06em}
+.clients-section-head h2 em{font-style:normal;color:var(--blue)}
+.clients-section-head p{font-size:clamp(17px,1.65vw,21px);line-height:1.6;max-width:560px;color:#52636b;margin:0}
+.clients-law-section{background:#071116}
+.clients-law-section .clients-section-head h2 em{color:var(--blue2)}
+.clients-law-section .clients-section-head p{color:#b8c8ce}
+.clients-brand-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.client-brand{display:flex;align-items:center;justify-content:center;min-height:165px;padding:22px 18px;text-align:center;border:1px solid #d2dce0;background:#e9eef0;border-radius:12px;transition:background .3s,border-color .3s,transform .3s,color .3s;overflow:hidden}
+.client-brand:hover{background:#fff;border-color:#9cb7c6;transform:translateY(-4px)}
+.client-brand-name{max-width:100%;color:#485b64;font-size:clamp(16px,1.4vw,21px);line-height:1.13;letter-spacing:-.035em;font-weight:700;overflow-wrap:normal;hyphens:auto;transition:color .3s}
+.client-brand:hover .client-brand-name{color:var(--blue)}
+.clients-brand-grid-dark .client-brand{background:#0f212b;border-color:#ffffff1a}
+.clients-brand-grid-dark .client-brand:hover{background:#173746;border-color:#45a9d778}
+.clients-brand-grid-dark .client-brand-name{color:#d9e4e8;font-size:clamp(15px,1.35vw,20px)}
+.clients-brand-grid-dark .client-brand:hover .client-brand-name{color:#b1e4ff}
+.clients-statement{padding-block:115px}
+.clients-statement h2{font-size:clamp(39px,5vw,76px);line-height:1.03;letter-spacing:-.06em;max-width:1100px;margin:0 0 45px}
+.clients-statement h2 em{font-style:normal;color:#c4ecff}
+.clients-statement .section-number{color:#c4ecff}
+.clients-statement .button{border-color:#ffffffbd;background:transparent;color:#fff}
+.clients-statement .button:hover{color:var(--ink);background:#fff}
+@media(max-width:1050px){.clients-summary-inner{grid-template-columns:1fr 135px 135px;gap:25px}.clients-section-head{gap:35px}}
+@media(max-width:900px){.clients-page .clients-hero{min-height:75svh}.clients-brand-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.clients-summary-inner{grid-template-columns:1fr 1fr}.clients-summary p{grid-column:1 / -1}.clients-section-head{grid-template-columns:1fr;gap:20px}.clients-list-section{padding-block:100px}.about-page .team-grid article{min-height:470px}}
+@media(max-width:560px){.clients-page .clients-hero{min-height:79svh}.clients-page .clients-hero .inner-hero-content{padding-top:138px;padding-bottom:58px}.clients-page .clients-hero h1{font-size:clamp(44px,11vw,64px);margin-bottom:26px}.clients-page .clients-hero p{font-size:17px}.clients-summary-inner{grid-template-columns:1fr 1fr;gap:24px;padding-block:30px}.clients-summary p{font-size:18px}.clients-stat{flex-direction:column;align-items:flex-start;gap:5px}.clients-stat strong{font-size:54px}.clients-brand-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.client-brand{min-height:136px;padding:14px 10px;border-radius:8px}.client-brand-name{font-size:clamp(13px,3.7vw,17px)}.clients-brand-grid-dark .client-brand-name{font-size:clamp(12px,3.4vw,16px)}.clients-section-head{margin-bottom:35px}.clients-section-head h2{font-size:clamp(41px,11vw,56px)}.clients-list-section{padding-block:75px}.clients-statement{padding-block:84px}.clients-statement h2{font-size:clamp(38px,10vw,55px)}.about-page .team-grid article{min-height:420px;padding:28px 25px}.about-page .team-grid .team-bio{font-size:15px}}
+@media(prefers-reduced-motion:reduce){.client-brand{transition:none}.client-brand:hover{transform:none}}
+
+
+/* PSG v06 — integrais fornecidas pelo cliente, mantendo os cards originais.
+   Conteúdo começa no alto do cartão em vez de ficar preso à base.
+   Não alterar o layout compartilhado, o sistema de cores ou as transições. */
+.about-page .team-grid article{
+  min-height:0;
+  height:auto;
+  justify-content:flex-start;
+  align-items:stretch;
+  padding:32px 30px 36px;
+}
+.about-page .team-grid article>span{
+  position:static;
+  display:block;
+  margin:0 0 28px;
+}
+.about-page .team-grid .team-degree{
+  margin:0 0 12px;
+}
+.about-page .team-grid h3{
+  margin:0 0 20px;
+}
+.about-page .team-grid .team-bio{
+  margin:0;
+  max-width:none;
+  font-size:15px;
+  line-height:1.66;
+}
+.about-page .team-grid .team-bio+.team-bio{
+  margin-top:18px;
+}
+/* Sobrescreve os antigos min-height:470/420px da v05, inclusive no mobile. */
+@media(max-width:900px){
+  .about-page .team-grid article{min-height:0}
+}
+@media(max-width:560px){
+  .about-page .team-grid article{min-height:0;padding:28px 25px 32px}
+  .about-page .team-grid .team-bio{font-size:15px}
+}
+
+
+/* PSG v07 — cards de equipe em linhas horizontais, sem abreviar biografias.
+   Cada card ocupa 100% da largura do container, sem modificar o restante do site. */
+.about-page .team-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+}
+.about-page .team-grid article {
+  display: grid;
+  grid-template-columns: minmax(250px, .78fr) minmax(0, 1.55fr);
+  align-items: start;
+  column-gap: clamp(32px, 5vw, 84px);
+  width: 100%;
+  min-height: 0;
+  padding: clamp(30px, 3.4vw, 52px);
+  justify-content: initial;
+}
+.about-page .team-grid .team-overview,
+.about-page .team-grid .team-details {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+.about-page .team-grid .team-index {
+  display: block;
+  margin: 0 0 clamp(24px, 3vw, 42px);
+  color: var(--blue);
+  font: 500 11px "IBM Plex Mono", monospace;
+  line-height: 1;
+}
+.about-page .team-grid .team-degree {
+  margin: 0 0 12px;
+}
+.about-page .team-grid h3 {
+  margin: 0;
+  font-size: clamp(28px, 2.7vw, 42px);
+  line-height: 1.1;
+  overflow-wrap: break-word;
+}
+.about-page .team-grid .team-details {
+  padding-top: 1px;
+}
+.about-page .team-grid .team-bio {
+  max-width: none;
+  margin: 0;
+  font-size: clamp(15px, 1.26vw, 17px);
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+.about-page .team-grid .team-bio + .team-bio {
+  margin-top: 20px;
+}
+.about-page .team-grid article:hover .team-index,
+.about-page .team-grid article:hover .team-degree {
+  color: #d6f0ff;
+}
+.about-page .team-grid article:hover .team-bio {
+  color: #edf7fa;
+}
+@media (max-width: 800px) {
+  .about-page .team-grid article {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 24px;
+  }
+  .about-page .team-grid .team-index {
+    margin-bottom: 26px;
+  }
+}
+@media (max-width: 560px) {
+  .about-page .team-grid article {
+    padding: 30px 25px 34px;
+    row-gap: 20px;
+  }
+  .about-page .team-grid h3 {
+    font-size: clamp(27px, 7vw, 36px);
+  }
+  .about-page .team-grid .team-bio {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+}
