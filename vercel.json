@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/a-psg.html",
+      "destination": "/a-psg/",
+      "permanent": true
+    },
+    {
+      "source": "/solucoes.html",
+      "destination": "/solucoes/",
+      "permanent": true
+    },
+    {
+      "source": "/a-psg/index.html",
+      "destination": "/a-psg/",
+      "permanent": true
+    },
+    {
+      "source": "/solucoes/index.html",
+      "destination": "/solucoes/",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
+}
