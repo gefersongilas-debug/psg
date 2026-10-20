@@ -70,13 +70,9 @@ html.psg-navigating{cursor:progress}
 /* A página local (file://) também recebe uma entrada suave. */
 @keyframes psgFileEnter{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
 html.psg-file-entry main{animation:psgFileEnter .32s ease-out both}
-/* Evita filtros pesados/blur nas várias seções durante o scroll. */
-.reveal{filter:none;transform:translateY(14px);transition:opacity .52s ease,transform .52s cubic-bezier(.2,.8,.2,1)}
-.reveal-left{transform:translateX(-20px)}
-.reveal-right{transform:translateX(20px)}
-.reveal.visible{filter:none}
-.about-page .inner-hero-bg{animation-duration:.65s}
-.about-page .inner-hero-content{animation-duration:.55s;animation-delay:.05s}
+/* PSG v04: os efeitos originais de .reveal (blur 5px, fade de 0,85s
+   e movimento de 30px) são preservados sem sobrescritas.
+   A navegação fluida da v03 permanece independente desta animação. */
 @media(prefers-reduced-motion:reduce){
  main,html.psg-leaving main,html.psg-entering main{transition:none;transform:none}
  html.psg-file-entry main{animation:none}

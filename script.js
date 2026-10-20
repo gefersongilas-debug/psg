@@ -49,7 +49,7 @@
             revealObserver.unobserve(entry.target);
           }
         }
-      }, {rootMargin:'0px 0px 50px 0px', threshold:.04});
+      }, {threshold:.12});
       document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
     } else {
       document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
