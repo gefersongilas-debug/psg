@@ -257,3 +257,24 @@ html.psg-file-entry main{animation:psgFileEnter .32s ease-out both}
     line-height: 1.7;
   }
 }
+
+/* PSG v08 — logos oficiais dos clientes. Imagens coloridas na seção clara,
+   assinaturas brancas na seção escura; compatível com navegação sem reload. */
+.clients-page .client-brand .client-brand-logo {
+  display:block;
+  width:auto;
+  height:auto;
+  max-width:92%;
+  max-height:96px;
+  object-fit:contain;
+  flex:0 1 auto;
+  transition:transform .3s ease;
+}
+.clients-page .client-brand:hover .client-brand-logo {transform:scale(1.035)}
+@media(max-width:560px){
+  .clients-page .client-brand .client-brand-logo {max-width:96%; max-height:77px}
+}
+@media(prefers-reduced-motion:reduce){
+  .clients-page .client-brand .client-brand-logo {transition:none}
+  .clients-page .client-brand:hover .client-brand-logo {transform:none}
+}
